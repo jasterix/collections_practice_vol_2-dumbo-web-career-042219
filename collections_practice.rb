@@ -50,7 +50,7 @@ end
 def merge_data(keys, data)
   keys.each do |name_hash|
     data.each do |hash|
-      name_hash.merge!(hash[name_hash[0]])
+      name_hash.merge!(hash[name_hash[1]])
     end
   end
 end
