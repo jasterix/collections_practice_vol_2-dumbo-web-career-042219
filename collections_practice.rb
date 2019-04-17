@@ -38,11 +38,7 @@ def remove_non_strings(elements)
 end
 
 def count_elements(elements)
-  elements = elements.to_a
-  elements.each_with_index {|word, index|
-  
-    ":count => #{index}, #{word}"
+  elements.group_by(&:itself).map do |key, value|
+     key.merge({:count => value.length})
   end
-  }
 end
-  
