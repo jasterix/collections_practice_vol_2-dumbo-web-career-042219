@@ -48,9 +48,9 @@ def merge_data(keys, data)
 end
 
 def merge_data(keys, data)
-  new_keys_1 = {keys[i].keys.to_a[i] => data.to_a[i].to_a[i][i]}
-  new_data_1 = new_keys_1.merge(data[i].values.to_a[i])
-  new_keys_2 = {keys[i+1].keys.to_a[i] => data.to_a[i].to_a[i+1][i]}
-  new_data_2 = new_keys_2.merge(data[i].values.to_a[i+1])
- [new_data_1, new_data_2]
+  keys.each do |name_hash|
+    data.each do |hash|
+      name_hash.merge!(hash[name_hash[:first_name]])
+    end
+  end
 end
