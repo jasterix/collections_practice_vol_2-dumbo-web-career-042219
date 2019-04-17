@@ -1,4 +1,5 @@
 # your code goes here
+require 'pry'
 def begins_with_r(elements)
   elements.all? do
     |i| i.start_with?"r" 
@@ -50,7 +51,8 @@ end
 def merge_data(keys, data)
   keys.each do |name_hash|
     data.each do |hash|
-      name_hash.merge!(hash[name_hash[1]])
+      name_hash.merge!(hash[name_hash[:first_name]])
+      binding.pry
     end
   end
 end
