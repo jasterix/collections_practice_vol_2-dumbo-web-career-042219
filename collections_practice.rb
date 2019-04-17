@@ -42,3 +42,7 @@ def count_elements(elements)
      key.merge({:count => value.length})
   end
 end
+
+def merge_data
+  
+end
