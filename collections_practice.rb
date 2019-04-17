@@ -43,6 +43,6 @@ def count_elements(elements)
   end
 end
 
-def merge_data
+def merge_data(keys, data)
   
 end
