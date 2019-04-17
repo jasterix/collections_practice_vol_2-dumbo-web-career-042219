@@ -48,9 +48,9 @@ def merge_data(keys, data)
 end
 
 def merge_data(keys, data)
-  new_k1 = {keys[0].keys.to_a[0] => data.to_a[0].to_a[0][0]}
-  new_d1 = new_keys_1.merge(d[0].values.to_a[0])
-  new_k2 = {keys[1].keys.to_a[0] => data.to_a[0].to_a[1][0]}
-  new_d2 = new_keys_2.merge(data[0].values.to_a[1])
+  new_keys_1 = {keys[i].keys.to_a[i] => data.to_a[i].to_a[i][i]}
+  new_data_1 = new_keys_1.merge(data[i].values.to_a[i])
+  new_keys_2 = {keys[i+1].keys.to_a[i] => data.to_a[i].to_a[i+1][i]}
+  new_data_2 = new_keys_2.merge(data[i].values.to_a[i+1])
  [new_data_1, new_data_2]
 end
