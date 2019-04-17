@@ -48,7 +48,7 @@ def merge_data(keys, data)
   
 end
 
-def merge_data(keys, data) #substitute profile, details for keys, data. profile is the person's snapshot, details is additional infoa about them
+def merge_data(keys, data) #substitute profile, details for keys, data. profile is the person's snapshot, details is additional infoa about them. Keys just has their first name and 
   keys.each do |name_hash| #name_hash is their full bio. You're making the bio here
     data.each do |hash| 
       name_hash.merge!(hash[name_hash[:first_name]])
